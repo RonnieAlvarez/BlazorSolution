@@ -9,7 +9,7 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 //  AQUI SE CAMBIO LA URI PARA DIRECCIONAR LA UBICACION DEL API SERVER
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:5104") });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("rac506-001-site1.ltempurl.com") });
 
 // inyeccion de dependencia de los servicios
 

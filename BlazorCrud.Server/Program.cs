@@ -40,6 +40,12 @@ namespace BlazorCrud.Server
                 app.UseSwaggerUI();
             }
 
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
+            }
+            app.UseHttpsRedirection(); // Habilita la redirección HTTPS
 
             // Aqui se llaman los CORS
             app.UseCors("nuevaPolitica");
